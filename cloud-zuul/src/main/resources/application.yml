@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: cloud-zuul
+eureka:
+  client:
+    service-url:
+     defaultZone: http://127.0.0.1:1000/eureka/
+server:
+  port: 1400
+zuul:
+  routes:
+  #随意命名
+  # /api-a/** 的请求 路由到 CLOUD-RIBBON
+   api-a:
+     path: /api-a/**
+     serviceId: CLOUD-RIBBON
+     # /api-b/** 的请求 路由到 CLOUD-FEGIN
+   api-b:
+     path: /api-b/**
+     serviceId: CLOUD-FEGIN

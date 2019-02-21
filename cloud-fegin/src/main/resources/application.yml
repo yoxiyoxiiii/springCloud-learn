@@ -1,0 +1,14 @@
+
+spring:
+  application:
+    name: cloud-fegin
+server:
+  port: 1300
+eureka:
+  client:
+    service-url:
+     defaultZone: http://127.0.0.1:1000/eureka/
+# 开启fegin 的 hystrix 功能
+feign:
+  hystrix:
+   enabled: true

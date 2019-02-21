@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: eureka
+server:
+  port: 1000
+eureka:
+  client:
+  #注册中心自己不注册在服务列表
+    register-with-eureka: false
+    # 去注册中心获取服务列表，集群模式下需要开启
+    fetch-registry: false
+    # 注册中心地址
+    service-url:
+      defaultZone: http://127.0.0.1:1000/eureka

@@ -1,0 +1,10 @@
+
+spring:
+  application:
+    name: cloud-ribbon
+server:
+  port: 1200
+eureka:
+  client:
+    service-url:
+     defaultZone: http://127.0.0.1:1000/eureka/
