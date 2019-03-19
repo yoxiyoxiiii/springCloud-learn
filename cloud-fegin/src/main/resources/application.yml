@@ -12,3 +12,12 @@ eureka:
 feign:
   hystrix:
    enabled: true
+
+# hystrix 熔断机制 设置服务超时时间
+hystrix:
+  command:
+      default:
+        execution:
+          isolation:
+            thread:
+              timeoutInMilliseconds: 5000
