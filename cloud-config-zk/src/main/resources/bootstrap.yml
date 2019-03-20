@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    zookeeper:
+      config:
+        enabled: true
+        root: /config
+#        defaultContext: apps
+#        profileSeparator: '-'
+      connect-string: 192.168.86.90:2181
+  application:
+    name: zk-config
